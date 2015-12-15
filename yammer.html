@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('yammer', {
+        category: 'social',
+        color: '#3FADB5',
+        defaults: {
+            token: {value: ""},
+            endpoint: {value: "users"},
+            method: {value: ""},
+            restid: {value: ""},
+            parameters: {value: ""},
+            name: {value: ""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "yammer.png",
+        label: function () {
+            return this.name || "yammer";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="yammer">
+    <div class="form-row">
+        <label for="node-input-token"><i class="icon-tag"></i> Yammer User Token</label>
+        <input type="text" id="node-input-token" placeholder="Token">
+    </div>
+    <div class="form-row">
+        <label for="node-input-endpoint"><i class="icon-tag"></i> Endpoint</label>
+        <input type="text" id="node-input-endpoint" placeholder="endpoint">
+    </div>
+    <div class="form-row">
+        <label for="node-input-method"><i class="icon-tag"></i> Method</label>
+        <input type="text" id="node-input-method" placeholder="method">
+    </div>
+    <div class="form-row">
+        <label for="node-input-restid"><i class="icon-tag"></i> ID</label>
+        <input type="text" id="node-input-restid" placeholder="restid">
+    </div>
+    <div class="form-row">
+        <label for="node-input-parameters"><i class="icon-tag"></i> Parameters</label>
+        <input type="text" id="node-input-parameters" placeholder="parameters">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="yammer">
+    <p>Last Changed 17-12-2014 15:21</p>
+    <p style="color:red"><b>WARNING</b>: Token must be valid (usually 30 days), please test the token. If necessary generate new token</p>
+    <p>Connect to Yammer and get data using the endpoint, method, id and parameters</p>
+</script>

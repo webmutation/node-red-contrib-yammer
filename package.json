@@ -1,0 +1,14 @@
+{
+    "name"         : "node-red-contrib-yammer",
+    "version"      : "0.0.1",
+    "description"  : "yammer",
+    "dependencies": {
+        "yammer-rest-api-client": ">=0.2.6"
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "sample": "yammer.js"
+        }
+    }
+}
